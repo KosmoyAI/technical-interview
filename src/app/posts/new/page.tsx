@@ -19,7 +19,7 @@ export default function NewEntity() {
 
 		addEntity({ name, description }).then(() => {
 			router.push('/posts');
-		});	
+		});
 	}, [name, description, addEntity, router]);
 
 	return (

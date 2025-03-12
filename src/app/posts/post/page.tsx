@@ -3,13 +3,12 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Card from '@/components/Card';
-import Layout from '@/components/Layout';
 import { useData, Entity } from '@/hooks/useData';
 import { useSearchParams } from 'next/navigation';
 
 export default function EntityDetail() {
   const { entities } = useData();
-	const searchParams = useSearchParams();
+  const searchParams = useSearchParams();
   const [entity, setEntity] = useState<Entity | undefined>(undefined);
 
   useEffect(() => {
@@ -19,12 +18,12 @@ export default function EntityDetail() {
 
   if (!entity) {
     return (
-      <Layout>
+      <>
         <p>Entity not found.</p>
         <Link className="text-blue-600 hover:underline" href="/posts">
           Back to list
         </Link>
-      </Layout>
+      </>
     );
   }
 
