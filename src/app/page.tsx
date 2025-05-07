@@ -7,7 +7,7 @@ export default function Posts() {
     <>
       <h1>Posts List</h1>
       <Link href="/posts">
-        <a>Goto Posts</a>
+        Goto Posts
       </Link>
     </>
   );
